@@ -10,7 +10,10 @@ public class  DNASequencer {
         logger.info("Starting sequencer...");
     }
 
-    public String calculate(List<String> part){
+    public String calculate(List<String> parts) throws Exception{
+        if(parts.size() > 160000){
+            throw new Exception("Too many subseqs");
+        }
         return "AGATTACAGA";
     }
 }
